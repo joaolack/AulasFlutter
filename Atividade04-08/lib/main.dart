@@ -1,71 +1,22 @@
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 
 void main() {
-  
-  String nome = "João Gabriel";
-  int idade = 19;
-  double altura = 1.80;
-  bool estudaFlutter = true;
-
-  String verificaIdade;
-  if (idade >= 18) {
-    verificaIdade = "O Aluno $nome é maior de idade.";
-  } else {
-    verificaIdade = "O Aluno $nome é menor de idade.";
-  }
-  
-  String apresentacao = apresentarAluno(nome, idade, estudaFlutter);
-  
-  List<String> linguagens = ["Python", "Java", "JavaScript"];
-  
-  Map<String, int> horasCursadas = {
-    'Programação Orientada a Objetos': 150,
-    'Programação de Dispositivos Móveis': 50,
-    'Estrutura de Dados': 100,
-  };
-
-  print(apresentacao);
-  print('Altura: $altura metros');
-  print(verificaIdade);
-  print('Linguagens favoritas: $linguagens');
-  print('Horas estudadas por matéria: $horasCursadas');
-  
   runApp(const MyApp());
-}
-
-String apresentarAluno(String nome, int idade, bool estudaFlutter) {
-  return "Olá, meu name é $nome, tenho $idade anos e estou aprendendo Flutter: $estudaFlutter";
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      title: 'Atividade 04-08',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const HomePage(),
     );
-  }
+  }  
 }
 
 class MyHomePage extends StatefulWidget {
